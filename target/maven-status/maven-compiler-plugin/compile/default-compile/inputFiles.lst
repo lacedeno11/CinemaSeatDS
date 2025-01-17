@@ -8,6 +8,7 @@
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/utils/ValidadorCorreo.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/modelos/Usuario.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/excepciones/TiempoExcedidoException.java
+/Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/modelos/Boleto.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/visualizacion/ConsolaVisualizador.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/gestores/GestorCompras.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/CinemaSeatApp.java
@@ -24,7 +25,6 @@
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/gestores/GestorFunciones.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/gestores/GestorUsuarios.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/estados_asientos/EstadoAsiento.java
-/Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/visualizacion/MapaInteractivo.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/gestores/GestorNotificaciones.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/gestores/GestorChats.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/modelos/Administrador.java

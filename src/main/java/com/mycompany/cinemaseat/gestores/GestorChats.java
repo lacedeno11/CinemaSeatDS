@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorChats {
-    private static final String ARCHIVO_CHATS = "DBjson/chats.json";
+    private static final String ARCHIVO_CHATS = "data/DBjson/chats.json";
     private List<Chat> chats;
 
     public static class Chat {
@@ -75,5 +75,32 @@ public class GestorChats {
         } catch (java.io.IOException e) {
             System.out.println("Error al guardar los chats: " + e.getMessage());
         }
+    }
+    public List<Chat> obtenerChatsSinRespuesta(){
+        List<Chat> chatsSinRespuesta = new ArrayList<>();
+        for (Chat chat : chats) {
+            if (chat.respuestaAdministrador == null || chat.respuestaAdministrador.isEmpty()) {
+                chatsSinRespuesta.add(chat);
+            }
+        }
+        return chatsSinRespuesta;
+    }
+
+    public void responderChatParaAdmin(String cliente, String respuestaAdministrador,List<Chat> chatsSinRespuestas ) {
+        for (Chat chat : chatsSinRespuestas) {
+            if (chat.cliente.equals(cliente) && (chat.respuestaAdministrador == null || chat.respuestaAdministrador.isEmpty())) {
+                chat.respuestaAdministrador = respuestaAdministrador;
+                guardarChats();
+                System.out.println("Respuesta enviada al cliente: " + cliente);
+                return;
+            }
+        }
+        System.out.println("No se encontró un chat sin respuesta para el cliente: " + cliente);
+    }
+
+    public void iniciarChat(String cliente, String mensajeCliente) {
+        chats.add(new Chat(cliente, mensajeCliente, ""));
+        guardarChats();
+        System.out.println("Chat iniciado por el cliente: " + cliente);
     }
 }

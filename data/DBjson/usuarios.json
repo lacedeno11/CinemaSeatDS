@@ -1,0 +1,83 @@
+[
+  {
+    "nombre": "Admin",
+    "email": "admin@cinema.com",
+    "password": "admin123",
+    "tipoUsuario": "Administrador"
+  },
+  {
+    "boletosComprados": [
+      {
+        "idFuncion": "funcion001",
+        "asientos": [
+          "A1",
+          "A2"
+        ],
+        "subtotal": 25.0
+      },
+      {
+        "idFuncion": "funcion002",
+        "asientos": [
+          "B3",
+          "B4"
+        ],
+        "subtotal": 30.0
+      }
+    ],
+    "nombre": "Juan Pérez",
+    "email": "juan.perez@example.com",
+    "password": "cliente123",
+    "tipoUsuario": "Cliente"
+  },
+  {
+    "boletosComprados": [
+      {
+        "idFuncion": "1f7b8c00-1234-4abc-9876-abcdef123456",
+        "asientos": [
+          "C1",
+          "C2"
+        ],
+        "subtotal": 35.0
+      },
+      {
+        "idFuncion": "1f7b8c00-1234-4abc-9876-abcdef123456",
+        "asientos": [
+          "A1"
+        ],
+        "subtotal": 10.0
+      },
+      {
+        "idFuncion": "1f7b8c00-1234-4abc-9876-abcdef123456",
+        "asientos": [
+          "C10"
+        ],
+        "subtotal": 10.0
+      },
+      {
+        "idFuncion": "1f7b8c00-1234-4abc-9876-abcdef123456",
+        "asientos": [
+          "C9"
+        ],
+        "subtotal": 10.0
+      },
+      {
+        "idFuncion": "2c4d6e00-5678-4def-1234-bcdef1234567",
+        "asientos": [
+          "F10"
+        ],
+        "subtotal": 20.0
+      },
+      {
+        "idFuncion": "2c4d6e00-5678-4def-1234-bcdef1234567",
+        "asientos": [
+          "F1"
+        ],
+        "subtotal": 20.0
+      }
+    ],
+    "nombre": "Ana Gómez",
+    "email": "ana.gomez@example.com",
+    "password": "cliente456",
+    "tipoUsuario": "Cliente"
+  }
+]

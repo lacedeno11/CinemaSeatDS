@@ -21,7 +21,7 @@
       "4D": 1
     }
   },
-    {
+  {
     "nombreSala": "Sala 3",
     "filas": 6,
     "columnas": 10,
@@ -31,6 +31,16 @@
       "VIP": 2,
       "4D": 2
     }
+  },
+  {
+    "nombreSala": "Sala 4",
+    "filas": 7,
+    "columnas": 10,
+    "disponible": true,
+    "distribucionAsientos": {
+      "4D": 1,
+      "STD": 3,
+      "VIP": 3
+    }
   }
-  
 ]
