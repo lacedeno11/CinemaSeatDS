@@ -1,18 +1,33 @@
 [
   {
+    "id": "1f7b8c00-1234-4abc-9876-abcdef123456",
     "sala": "Sala 1",
     "pelicula": "Avatar 2",
     "horario": "2025-01-15 18:00:00",
     "estado": "PROGRAMADA",
     "idioma": "Español",
-    "asientosOcupados": ["A3", "B5", "C7"]
+    "asientosOcupados": [
+      "A3",
+      "B5",
+      "C7",
+      "A1",
+      "C10",
+      "C9"
+    ]
   },
   {
+    "id": "2c4d6e00-5678-4def-1234-bcdef1234567",
     "sala": "Sala 2",
     "pelicula": "Inception",
     "horario": "2025-01-15 20:30:00",
     "estado": "PROGRAMADA",
     "idioma": "Inglés",
-    "asientosOcupados": ["A1", "D4", "E9"]
+    "asientosOcupados": [
+      "A1",
+      "D4",
+      "E9",
+      "F10",
+      "F1"
+    ]
   }
 ]

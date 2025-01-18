@@ -4,11 +4,13 @@ public abstract class Usuario {
     protected String nombre;
     protected String email;
     protected String password;
+    protected String tipoUsuario; // Nuevo campo
 
-    public Usuario(String nombre, String email, String password) {
+    public Usuario(String nombre, String email, String password, String tipoUsuario) {
         this.nombre = nombre;
         this.email = email;
         this.password = password;
+        this.tipoUsuario = tipoUsuario;
     }
 
     public String getNombre() {
@@ -23,5 +25,7 @@ public abstract class Usuario {
         return this.password.equals(passwordIngresada);
     }
 
-    public abstract String getTipoUsuario();  // Método abstracto que será implementado por `Cliente` y `Administrador`
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
 }

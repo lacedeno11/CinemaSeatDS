@@ -12,6 +12,7 @@ com/mycompany/cinemaseat/modelos/Administrador.class
 com/mycompany/cinemaseat/tipos_asientos/Asiento4D.class
 com/mycompany/cinemaseat/MainPruebas.class
 com/mycompany/cinemaseat/gestores/GestorChats$1.class
+com/mycompany/cinemaseat/modelos/Boleto.class
 com/mycompany/cinemaseat/gestores/GestorChats.class
 com/mycompany/cinemaseat/gestores/GestorFunciones$1.class
 com/mycompany/cinemaseat/visualizacion/ConsolaVisualizador.class
@@ -30,4 +31,5 @@ com/mycompany/cinemaseat/excepciones/AsientoNoDisponibleException.class
 com/mycompany/cinemaseat/tipos_asientos/AsientoVIP.class
 com/mycompany/cinemaseat/observadores/ObservadorCompra.class
 com/mycompany/cinemaseat/modelos/Funcion.class
+com/mycompany/cinemaseat/utils/ValidadorCorreo.class
 com/mycompany/cinemaseat/excepciones/UsuarioNoAutorizadoException.class
