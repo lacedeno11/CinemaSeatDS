@@ -26,6 +26,51 @@ public class MainPruebas {
         GestorUsuarios gestorUsuarios = new GestorUsuarios();
 
         MenuAdministrador menuAdmin = new MenuAdministrador(gestorFunciones, gestorSalas, gestorUsuarios);
-        menuAdmin.mostrarMenu();
+        ClienteCompraApp clienteApp = new ClienteCompraApp(gestorFunciones, gestorSalas);
+
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("\n--- Menú Principal ---");
+            System.out.println("1. Menú Administrador");
+            System.out.println("2. Menú Cliente (Comprar Boletos)");
+            System.out.println("3. Salir");
+            System.out.print("Seleccione una opción: ");
+
+            opcion = leerEntero(scanner);
+
+            switch (opcion) {
+                case 1:
+                    menuAdmin.mostrarMenu();
+                    break;
+                case 2:
+                    clienteApp.iniciar();
+                    break;
+                case 3:
+                    System.out.println("Saliendo del sistema...");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Intente de nuevo.");
+            }
+        } while (opcion != 3);
     }
- }
+
+    private static int leerEntero(Scanner scanner) {
+        int numero;
+        while (true) {
+            try {
+                String input = scanner.nextLine();
+                numero = Integer.parseInt(input);
+                if (numero < 0) {
+                    System.out.print("Entrada inválida. Por favor, ingrese un número positivo: ");
+                    continue;
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.print("Entrada inválida. Por favor, ingrese un número: ");
+            }
+        }
+        return numero;
+    }
+}
