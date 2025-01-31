@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.cinemaseat;
+package com.mycompany.cinemaseat.visualizacion;
 
 import com.mycompany.cinemaseat.gestores.GestorFunciones;
 import com.mycompany.cinemaseat.gestores.GestorSalas;
@@ -134,11 +134,5 @@ public class ClienteCompraApp {
         return numero;
     }
 
-    public static void main(String[] args) {
-        GestorFunciones gestorFunciones = new GestorFunciones();
-        GestorSalas gestorSalas = new GestorSalas();
 
-        ClienteCompraApp app = new ClienteCompraApp(gestorFunciones, gestorSalas);
-        app.iniciar();
-    }
 }

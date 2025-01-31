@@ -11,6 +11,7 @@ com/mycompany/cinemaseat/gestores/GestorUsuarios$1.class
 com/mycompany/cinemaseat/modelos/Administrador.class
 com/mycompany/cinemaseat/tipos_asientos/Asiento4D.class
 com/mycompany/cinemaseat/MainPruebas.class
+com/mycompany/cinemaseat/visualizacion/ClienteCompraApp.class
 com/mycompany/cinemaseat/gestores/GestorChats$1.class
 com/mycompany/cinemaseat/modelos/Boleto.class
 com/mycompany/cinemaseat/gestores/GestorChats.class

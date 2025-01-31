@@ -19,6 +19,7 @@
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/visualizacion/MenuAdministrador.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/tipos_asientos/AsientoEstandar.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/observadores/ObservadorCompra.java
+/Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/visualizacion/ClienteCompraApp.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/modelos/Cliente.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/estados_asientos/AsientoReservado.java
 /Users/abrahamcedeno/NetBeansProjects/CinemaSeat/src/main/java/com/mycompany/cinemaseat/excepciones/AsientoNoDisponibleException.java

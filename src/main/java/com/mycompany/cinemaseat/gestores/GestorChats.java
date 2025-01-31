@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestorChats {
-    private static final String ARCHIVO_CHATS = "data/DBjson/chats.json";
+    private String archivoChats = "data/DBjson/chats.json";
     private List<Chat> chats;
 
     public static class Chat {
@@ -37,9 +37,11 @@ public class GestorChats {
     public GestorChats() {
         this.chats = cargarChats();
     }
-
+    public void setArchivoChats(String ruta) {
+        this.archivoChats = ruta;
+    }
     public List<Chat> cargarChats() {
-        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(ARCHIVO_CHATS);
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(archivoChats);
              BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
             Gson gson = new Gson();
             Type tipoLista = new TypeToken<List<Chat>>() {}.getType();
@@ -103,4 +105,7 @@ public class GestorChats {
         guardarChats();
         System.out.println("Chat iniciado por el cliente: " + cliente);
     }
+    public List<Chat> getChats() {
+    return this.chats;
+}
 }

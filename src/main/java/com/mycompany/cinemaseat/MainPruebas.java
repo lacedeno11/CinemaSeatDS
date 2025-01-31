@@ -12,6 +12,7 @@ import com.mycompany.cinemaseat.gestores.GestorUsuarios;
 import com.mycompany.cinemaseat.modelos.Boleto;
 import com.mycompany.cinemaseat.modelos.Cliente;
 import com.mycompany.cinemaseat.modelos.Usuario;
+import com.mycompany.cinemaseat.visualizacion.ClienteCompraApp;
 import com.mycompany.cinemaseat.visualizacion.MenuAdministrador;
 import java.io.IOException;
 import java.util.Arrays;
