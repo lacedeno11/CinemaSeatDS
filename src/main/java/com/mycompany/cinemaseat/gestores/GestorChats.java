@@ -23,9 +23,9 @@ public class GestorChats {
     private List<Chat> chats;
 
     public static class Chat {
-        public String cliente;  // Cambiar a public
-        public String mensajeCliente;  // Cambiar a public
-        public String respuestaAdministrador;  // Cambiar a public
+        public String cliente;  
+        public String mensajeCliente;  
+        public String respuestaAdministrador;  
 
         public Chat(String cliente, String mensajeCliente, String respuestaAdministrador) {
             this.cliente = cliente;
@@ -101,11 +101,11 @@ public class GestorChats {
     }
 
     public void iniciarChat(String cliente, String mensajeCliente) {
-        chats.add(new Chat(cliente, mensajeCliente, ""));
-        guardarChats();
-        System.out.println("Chat iniciado por el cliente: " + cliente);
+            chats.add(new Chat(cliente, mensajeCliente, ""));
+            guardarChats();
+            System.out.println("Chat iniciado por el cliente: " + cliente);
+        }
+        public List<Chat> getChats() {
+        return this.chats;
     }
-    public List<Chat> getChats() {
-    return this.chats;
-}
 }
