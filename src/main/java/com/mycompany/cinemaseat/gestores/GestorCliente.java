@@ -3,6 +3,7 @@ package com.mycompany.cinemaseat.gestores;
 import com.mycompany.cinemaseat.modelos.Boleto;
 import com.mycompany.cinemaseat.modelos.Cliente;
 import com.mycompany.cinemaseat.modelos.Usuario;
+import com.mycompany.cinemaseat.modelos.UsuarioDatos;
 
 import java.util.List;
 
@@ -15,17 +16,26 @@ public class GestorCliente {
         this.gestorAutenticacion = gestorAutenticacion;
     }
 
-    public void registrarCliente(String nombre, String email, String password) {
-        if (gestorAutenticacion.buscarUsuario(email) != null) {
+    /**
+     * Registra un nuevo cliente utilizando un objeto `UsuarioDatos`.
+     *
+     * @param usuarioDatos Objeto que encapsula los datos del usuario.
+     */
+    public void registrarCliente(UsuarioDatos usuarioDatos) {
+        if (gestorAutenticacion.buscarUsuario(usuarioDatos.getEmail()) != null) {
             System.out.println("Error: Ya existe un usuario con el mismo email.");
             return;
         }
-        Cliente nuevoCliente = new Cliente(nombre, email, password, List.of());
+        Cliente nuevoCliente = new Cliente(usuarioDatos.getNombre(), usuarioDatos.getEmail(), usuarioDatos.getPassword(), List.of());
         usuarios.add(nuevoCliente);
         System.out.println("Cuenta registrada exitosamente.");
     }
 
-
+    /**
+     * Elimina un usuario por su email.
+     *
+     * @param email El email del usuario a eliminar.
+     */
     public void eliminarUsuario(String email) {
         Usuario usuario = gestorAutenticacion.buscarUsuario(email);
         if (usuario != null) {
@@ -36,7 +46,12 @@ public class GestorCliente {
         }
     }
 
-
+    /**
+     * Agrega un boleto a un usuario por su email.
+     *
+     * @param email  El email del usuario.
+     * @param boleto El boleto a agregar.
+     */
     public void agregarBoletoAUsuario(String email, Boleto boleto) {
         Usuario usuario = gestorAutenticacion.buscarUsuario(email);
         if (usuario == null) {
