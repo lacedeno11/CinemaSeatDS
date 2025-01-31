@@ -5,7 +5,7 @@ import com.mycompany.cinemaseat.gestores.GestorSalas;
 import com.mycompany.cinemaseat.modelos.Funcion;
 import com.mycompany.cinemaseat.modelos.Sala;
 import com.mycompany.cinemaseat.excepciones.AsientoNoDisponibleException;
-import com.mycompany.cinemaseat.visualizacion.ConsolaVisualizador;
+import com.mycompany.cinemaseat.utils.ValidadorEntradas;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ public class ClienteCompraApp {
         this.gestorFunciones = gestorFunciones;
         this.gestorSalas = gestorSalas;
         this.consolaVisualizador = new ConsolaVisualizador();
-        this.scanner = new Scanner(System.in); // Inicialización global para evitar duplicación
+        this.scanner = new Scanner(System.in); 
     }
 
     public void iniciar() {
@@ -67,7 +67,7 @@ public class ClienteCompraApp {
 
     private Funcion seleccionarFuncion(List<Funcion> funcionesDisponibles) {
         System.out.print("Seleccione el número de la función que desea ver: ");
-        int seleccion = leerEntero();
+        int seleccion = ValidadorEntradas.leerEntero(scanner); // Se usa el nuevo método
 
         if (seleccion < 1 || seleccion > funcionesDisponibles.size()) {
             System.out.println("Selección inválida.");
@@ -116,21 +116,5 @@ public class ClienteCompraApp {
     private void completarCompra(Set<String> asientosSeleccionados, Funcion funcion) {
         funcion.getAsientosOcupados().addAll(asientosSeleccionados);
         gestorFunciones.guardarFunciones();
-    }
-
-    private int leerEntero() {
-        while (true) {
-            try {
-                String input = scanner.nextLine();
-                int numero = Integer.parseInt(input);
-                if (numero < 0) {
-                    System.out.print("Entrada inválida. Por favor, ingrese un número positivo: ");
-                    continue;
-                }
-                return numero;
-            } catch (NumberFormatException e) {
-                System.out.print("Entrada inválida. Por favor, ingrese un número: ");
-            }
-        }
     }
 }
